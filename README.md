@@ -1,6 +1,6 @@
 # Rasa-Salatiga
 
-## 🖼️ Tampilan Website
+## Tampilan Website
 
 ![Halaman Home Rasa Salatiga](screenshots/home.png)
 
