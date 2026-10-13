@@ -1,0 +1,1334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #123c2c;
+    --dark-green: #09291f;
+    --cream: #f5f0e6;
+    --sage: #dfe7dc;
+    --orange: #c96f3d;
+    --text: #18392e;
+    --muted: #68776f;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.site-header {
+    position: fixed;
+    z-index: 1000;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(1250px, calc(100% - 36px));
+    height: 68px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 50px;
+
+    background: rgba(245, 240, 230, .88);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(18, 60, 44, .12);
+
+    transition: .3s;
+}
+
+.site-header.scrolled {
+    box-shadow:
+        0 15px 40px rgba(18, 60, 44, .15);
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.brand-text strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+}
+
+.brand-text small {
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    margin-top: 5px;
+}
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav a {
+    position: relative;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--orange);
+
+    transition: .3s;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+    width: 100%;
+}
+
+
+/* Stamp Badge */
+.stamp-badge {
+    position: absolute;
+    top: 15px;
+    right: 220px;
+    width: 90px;
+    height: 90px;
+    border: 2px dashed #d47a43;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #d47a43;
+    letter-spacing: 1px;
+    transform: rotate(-15deg);
+    z-index: 4;
+    background: rgba(11, 35, 25, 0.9);
+    text-align: center;
+}
+
+
+
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: var(--green);
+
+    margin: 4px auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 150px 8%;
+
+    color: white;
+
+    background: var(--dark-green);
+
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+
+    inset: -5%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 30, 22, .95),
+            rgba(5, 30, 22, .58),
+            rgba(5, 30, 22, .1)
+        ),
+        url("../img/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.04);
+
+    transition: transform 1s;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(255,255,255,.12),
+            transparent 35%
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+.eyebrow {
+    color: #e6ad88;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: .88;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 em {
+    color: var(--orange);
+
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 540px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #e0e8e3;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    padding: 15px 24px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--orange);
+
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(201,111,61,.25);
+}
+
+.btn-outline {
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.45);
+}
+
+.btn-outline:hover {
+    background: white;
+
+    color: var(--green);
+}
+
+.btn-dark {
+    background: var(--green);
+
+    color: white;
+}
+
+.btn-dark:hover {
+    background: var(--orange);
+
+    transform: translateY(-3px);
+}
+
+
+/* HERO INFO */
+
+.hero-location {
+    position: absolute;
+
+    right: 5%;
+
+    top: 50%;
+
+    writing-mode: vertical-rl;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,.7);
+}
+
+.hero-scroll {
+    position: absolute;
+
+    bottom: 30px;
+    left: 8%;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,.7);
+}
+
+.hero-scroll span {
+    color: #e5aa80;
+
+    margin-left: 12px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 120px 8%;
+}
+
+.section-label {
+    color: var(--orange);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.section-label.light {
+    color: #e4aa82;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: .95;
+
+    letter-spacing: -2px;
+}
+
+h2 em {
+    color: var(--orange);
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--cream);
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+.kicker {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.about-description {
+    max-width: 570px;
+
+    padding-top: 35px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.about-description p + p {
+    margin-top: 22px;
+}
+
+.about-description strong {
+    color: var(--text);
+}
+
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.dark-section {
+    background: var(--green);
+
+    color: white;
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+}
+
+.section-heading > p {
+    max-width: 390px;
+
+    color: #c0cec7;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOD
+========================= */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.food-card {
+    background: var(--cream);
+
+    color: var(--text);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.2);
+}
+
+.food-image {
+    height: 300px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.food-card:hover img {
+    transform: scale(1.08);
+}
+
+.food-image span {
+    position: absolute;
+
+    right: 15px;
+    top: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.food-content {
+    padding: 25px;
+}
+
+.food-content small,
+.heritage-info small {
+    color: var(--orange);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.food-content h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    line-height: 1.05;
+
+    margin: 12px 0;
+}
+
+.food-content p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    min-height: 65px;
+}
+
+.food-content a,
+.heritage-info a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.food-content b,
+.heritage-info b {
+    color: var(--orange);
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   HERITAGE
+========================= */
+
+.heritage {
+    background: var(--cream);
+}
+
+.heritage-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.heritage-card {
+    display: grid;
+
+    grid-template-columns:
+        60px 38% 1fr;
+
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #ccd2ca;
+
+    transition: .3s;
+}
+
+.heritage-card:last-child {
+    border-bottom: 1px solid #ccd2ca;
+}
+
+.heritage-number {
+    font-family: "Playfair Display", serif;
+
+    color: var(--orange);
+
+    font-size: 24px;
+}
+
+.heritage-image {
+    height: 270px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+}
+
+.heritage-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.heritage-card:hover img {
+    transform: scale(1.07);
+}
+
+.heritage-info {
+    max-width: 520px;
+}
+
+.heritage-info h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    margin: 14px 0;
+}
+
+.heritage-info p {
+    color: var(--muted);
+
+    line-height: 1.75;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   JOURNEY
+========================= */
+
+.journey {
+    background: var(--sage);
+}
+
+.journey-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.journey-grid > div:first-child > p {
+    max-width: 500px;
+
+    margin: 30px 0;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.timeline {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 18px;
+}
+
+.timeline-item > span {
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    color: var(--orange);
+}
+
+.timeline-item small {
+    color: var(--orange);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.timeline-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin: 7px 0;
+}
+
+.timeline-item p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.timeline-line {
+    height: 45px;
+
+    width: 1px;
+
+    margin-left: 29px;
+
+    background: #aebcb1;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: var(--cream);
+}
+
+.contact-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+    text-align: center;
+
+    border: 1px solid #ccd2ca;
+
+    border-radius: 28px;
+}
+
+.contact-box p {
+    max-width: 540px;
+
+    margin: 28px auto;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+
+.footer {
+    background: var(--dark-green);
+
+    color: white;
+
+    padding: 65px 8% 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 30px;
+}
+
+.footer-logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+}
+
+.footer-logo span {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.footer p {
+    color: #aebdb5;
+
+    margin-top: 10px;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    display: flex;
+
+    gap: 25px;
+
+    color: #8fa199;
+
+    font-size: 11px;
+}
+
+
+
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1050px) {
+
+    .food-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width:760px) {
+
+    .site-header {
+        top: 12px;
+
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+        right: 0;
+
+        padding: 22px;
+
+        border-radius: 22px;
+
+        background: var(--cream);
+
+        box-shadow:
+            0 20px 40px rgba(0,0,0,.15);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+
+    .hero {
+        padding:
+            140px 7% 100px;
+    }
+
+
+    .hero h1 {
+        font-size: 60px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-location {
+        display: none;
+    }
+
+
+    .section {
+        padding:
+            85px 7%;
+    }
+
+
+    .about-grid,
+    .journey-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .about-description {
+        padding-top: 0;
+    }
+
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .heritage-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .heritage-number {
+        display: none;
+    }
+
+
+    .heritage-image {
+        height: 250px;
+    }
+
+
+    .heritage-info h3 {
+        font-size: 34px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+    .site-header {
+        height: 60px;
+        padding: 0 14px;
+    }
+
+    .brand-text strong {
+        font-size: 17px;
+    }
+
+    .hero {
+        padding: 125px 6% 90px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 12vw, 56px);
+        letter-spacing: -1.5px;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    h2 {
+        font-size: clamp(38px, 10vw, 48px);
+    }
+
+    .food-image {
+        height: 240px;
+    }
+
+    .food-content {
+        padding: 20px;
+    }
+
+    .heritage-image {
+        height: 220px;
+    }
+
+    .contact-box {
+        padding: 55px 20px;
+    }
+
+    .footer {
+        padding: 50px 6% 25px;
+    }
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+.hero-polaroids {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+
+
+    .hero {
+        position: relative;
+    }
+
+
+    .hero-content {
+        position: relative;
+        width: 50%;
+        max-width: 50%;
+        z-index: 2;
+    }
+    .hero-polaroids {
+        display: block;
+        position: absolute;
+        width: 500px;
+        height: 450px;
+        right: 4%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+
+    
+    .polaroid {
+        position: absolute;
+        width: 240px;
+        padding: 12px 12px 42px;
+        background: #fffdf7;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        box-sizing: border-box;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .polaroid img {
+        display: block;
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+
+    .polaroid p {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 15px;
+        font-style: italic;
+        color: #38453a;
+    }
+
+   
+
+.polaroid-one {
+    top: 45px;
+    left: 90px;
+    transform: rotate(8deg);
+    z-index: 2;
+}
+
+
+.polaroid-two {
+    top: 130px;
+    left: 0;
+    transform: rotate(-9deg);
+    z-index: 3;
+}
+
+
+  
+
+    .polaroid-one:hover {
+        transform: rotate(13deg) translateY(-6px);
+        z-index: 4;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .polaroid-two:hover {
+        transform: rotate(-5deg) translateY(-6px);
+        z-index: 4;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+    }
+}
+/* TABLET */
+@media (min-width: 761px) and (max-width: 1199px) {
+
+
+    .hero-polaroids {
+        display: none !important;
+    }
+
+    
+    .hero {
+        min-height: 100vh;
+        padding: 140px 7% 110px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+   
+    .hero-content {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        z-index: 2;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(76px, 10vw, 120px);
+        line-height: 0.92;
+        letter-spacing: -3px;
+        margin-bottom: 32px;
+    }
+
+   
+    .hero-description {
+        max-width: 750px;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: 5px;
+        margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 35px;
+    }
+
+
+    .hero-location {
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        writing-mode: vertical-rl;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.7);
+        z-index: 3;
+    }
+}
