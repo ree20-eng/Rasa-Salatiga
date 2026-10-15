@@ -1,12 +1,12 @@
-# Rasa-Salatiga
+# Ruang-Salatiga
 
 ## Tampilan Website
 
-![Halaman Home Rasa Salatiga](screenshots/home.png)
+![Halaman Home Ruang Salatiga](screenshots/home.png)
 
-# Rasa Salatiga — Discover, Taste, Remember
+# Ruang Salatiga — Discover, Taste, Remember
 
-Website Rasa Salatiga merupakan platform yang memperkenalkan kuliner lokal, tempat wisata, dan lokasi bersejarah di Kota Salatiga, Jawa Tengah. Website ini juga bertujuan membantu memperkenalkan UMKM kuliner lokal agar lebih dikenal oleh masyarakat luas.
+Website Ruang Salatiga merupakan platform yang memperkenalkan kuliner lokal, tempat wisata, dan lokasi bersejarah di Kota Salatiga, Jawa Tengah. Website ini juga bertujuan membantu memperkenalkan UMKM kuliner lokal agar lebih dikenal oleh masyarakat luas.
 
 ## 👥 Nama Peserta
 
@@ -15,7 +15,7 @@ Website Rasa Salatiga merupakan platform yang memperkenalkan kuliner lokal, temp
 
 ## 📌 Deskripsi Website
 
-Website ini dibuat sebagai media informasi dan eksplorasi kuliner tradisional serta tempat wisata dan bersejarah di Kota Salatiga. Melalui website ini, pengunjung dapat mengenal makanan khas, menemukan lokasi kuliner lokal, mengetahui tempat bersejarah, serta menjelajahi keunikan Salatiga dalam satu platform.
+Website ini dibuat sebagai media informasi dan eksplorasi kuliner lokal serta tempat wisata dan bersejarah di Kota Salatiga. Melalui website ini, pengunjung dapat mengenal makanan khas, menemukan informasi lokasi kuliner lokal, mengetahui tempat bersejarah, serta menjelajahi keunikan Salatiga dalam satu platform.
 
 Dengan konsep **“Discover, Taste, Remember”**, website ini menyediakan informasi mengenai kuliner lokal, lokasi UMKM, serta tempat wisata dan bersejarah di Salatiga melalui tampilan yang menarik dan mudah digunakan. Website ini diharapkan dapat membantu pengunjung menemukan berbagai potensi lokal sekaligus mendukung pengenalan UMKM kuliner tradisional kepada masyarakat luas.
 
@@ -37,7 +37,7 @@ Dengan konsep **“Discover, Taste, Remember”**, website ini menyediakan infor
 ## 📂 Struktur Folder
 
 ```text
-Rasa-salatiga/
+Ruang-salatiga/
 ├── README.md
 ├── index.html
 ├── detail.html
@@ -76,7 +76,7 @@ Rasa-salatiga/
 
 **Home** — Halaman utama dengan slogan “Every taste has a story” dan deskripsi singkat.
 
-**Our Story** — Mengenalkan cerita dan identitas Rasa Salatiga.
+**Our Story** — Mengenalkan cerita dan identitas Ruang Salatiga.
 
 **Local Flavors** — Menampilkan rekomendasi kuliner lokal Salatiga dengan detail informasi dan lokasi.
 
@@ -84,7 +84,7 @@ Rasa-salatiga/
 
 **The Journey** — Memberikan rekomendasi pengalaman menjelajahi Salatiga.
 
-**Say Hello** — Bagian yang menjadi penutup sekaligus ajakan bagi pengunjung untuk terhubung dengan website Rasa Salatiga.
+**Say Hello** — Bagian yang menjadi penutup sekaligus ajakan bagi pengunjung untuk terhubung dengan website Ruang Salatiga.
 
 ## 🚀 Cara Menjalankan Website
 
@@ -96,14 +96,9 @@ Rasa-salatiga/
 
 ## 🌱 Manfaat Website
 
-Rasa Salatiga diharapkan dapat menjadi media digital untuk memperkenalkan kekayaan kuliner, UMKM lokal, tempat wisata, dan lokasi bersejarah di Kota Salatiga. Dengan informasi yang disajikan dalam satu platform, pengunjung dapat lebih mudah mengenal potensi lokal Salatiga dan menemukan tempat yang ingin dikunjungi.
+Ruang Salatiga diharapkan dapat menjadi media digital untuk memperkenalkan kekayaan kuliner, UMKM lokal, tempat wisata, dan lokasi bersejarah di Kota Salatiga. Dengan informasi yang disajikan dalam satu platform, pengunjung dapat lebih mudah mengenal potensi lokal Salatiga dan menemukan tempat yang ingin dikunjungi.
 
-## 👩‍💻 Pengembang
-
-Website ini dikembangkan oleh:
-
-- Reva Fitriani
 
 ---
 
-**Rasa Salatiga — Discover • Taste • Remember**
+**Ruang Salatiga — Discover • Taste • Remember**
